@@ -1,0 +1,54 @@
+﻿<Window x:Class="Neat_UI.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Neat_UI"
+        xmlns:app="clr-namespace:Neat_UI.resource"
+        mc:Ignorable="d"
+        Title="login" Height="400" Width="300"
+        AllowsTransparency="True" WindowStyle="None"
+        ResizeMode="NoResize" Background="Transparent"
+        MouseDown="Window_MouseDown" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="1">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0.1" Color="DarkSeaGreen"/>
+                    <GradientStop Offset="0.9" Color="PaleVioletRed"/>
+                </LinearGradientBrush>
+            </Border.Background>
+         </Border>
+
+        <StackPanel>
+            <StackPanel>
+            <Image Source="https://cdn-icons-png.flaticon.com/512/1828/1828445.png" Width="50" Height="40" Opacity="0.5" Margin="0,20,0,10" />
+            <Label Content="{x:Static app:resource.login }" FontSize="15" Opacity="0.5" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{x:Static app:resource.username}" Opacity="0.5" Margin="40,10,0,10" FontSize="12"/>
+                <TextBox x:Name="txtbox_username" Background="Transparent" Foreground="White" Width="130" Height="23" FontSize="15" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{x:Static app:resource.pass}" Opacity="0.5" Margin="40,10,0,10"/>
+                <PasswordBox x:Name="passwordBox" Background="Transparent"  Foreground="White" Width="130" Height="23" FontSize="15" Margin="15,0,0,0" />
+                <TextBox x:Name="passwordTxtBox" Background="Transparent"  Foreground="White" Width="130" Height="23" FontSize="15" Margin="-130,0,0,0" Visibility="Collapsed"/>
+            </StackPanel>
+
+            <StackPanel>
+                <CheckBox x:Name="chkbox_pass" Content="{x:Static app:resource.showpass}" Opacity="0.5" HorizontalAlignment="Center" Margin="0,10,0,10" Checked="CheckBox_Checked" Unchecked="chkbox_pass_Unchecked"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Button x:Name="btnlogin_submit" Content="{x:Static app:resource.submit}" Background="Transparent" Width="60" BorderBrush="Lavender" Margin="0,10,0,0" Click="btnlogin_submit_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

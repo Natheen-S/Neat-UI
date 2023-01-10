@@ -1,0 +1,55 @@
+﻿<Window x:Class="Neat_UI.lastpage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Neat_UI"
+        xmlns:app="clr-namespace:Neat_UI.resource"
+        mc:Ignorable="d"
+        Title="lastpage" Height="250" Width="400" 
+        AllowsTransparency="True" WindowStyle="None"
+        ResizeMode="NoResize" Background="Transparent"
+        MouseDown="Window_MouseDown" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+       
+
+            <Border CornerRadius="10" Grid.RowSpan="1">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0.1" Color="Cornsilk"/>
+                        <GradientStop Offset="0.8" Color="YellowGreen"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        <StackPanel>
+            <StackPanel>
+                <TextBox x:Name="txtbox_content1" Background="Transparent" Margin="0,20,0,10" FontSize="15" FontFamily="helvetica" FontWeight="DemiBold" Foreground="OrangeRed "/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="13" Content="{x:Static app:resource.oldpass}" Opacity="0.5" Margin="30,5,5,5"/>
+                <PasswordBox x:Name="txtbox_oldpass" Opacity="0.5" Background="Transparent" Margin="55,0,5,0" Width="120" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="13" Content="{x:Static app:resource.newpass}" Opacity="0.5" Margin="30,5,5,5"/>
+                <PasswordBox x:Name="txtbox_newpass" Opacity="0.5" Background="Transparent" Margin="50,0,0,0" Width="120" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="13" Content="{x:Static app:resource.cnewpass}" Opacity="0.5" Margin="30,5,5,5"/>
+                <PasswordBox x:Name="txtbox_cnewpass" Opacity="0.5" Background="Transparent" Margin="0,0,0,0" Width="120" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="{x:Static app:resource.update}" Background="Transparent" Opacity="0.5" Margin="150,10,20,0" BorderBrush="AliceBlue" Width="50" Height="20"/>
+                <Button Content="{x:Static app:resource.cancel}" Background="Transparent" Opacity="0.5" BorderBrush="AliceBlue" Width="50" Height="20" Margin="0,10,0,0"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
